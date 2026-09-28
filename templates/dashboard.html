@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Welcome back, {{ user.username }}</h2>
+      <p>Jump into a planner or review what you've planned so far.</p>
+    </div>
+
+    <div class="dash-grid">
+      <div class="stat-card">
+        <div class="num">{{ total }}</div>
+        <div>Total recommendations generated</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">3</div>
+        <div>Planners available: Home, Party, Jewelry</div>
+      </div>
+      <div class="stat-card">
+        <div class="num"><a href="/history">View all &rarr;</a></div>
+        <div>Full recommendation history</div>
+      </div>
+    </div>
+
+    <div class="card-grid mb-lg">
+      <div class="plan-card">
+        <span class="icon">H</span>
+        <h3>Home Interior</h3>
+        <p>Plan lighting, furniture, and decor for any room within budget.</p>
+        <a class="btn btn-primary" href="/planner/home">Open planner</a>
+      </div>
+      <div class="plan-card">
+        <span class="icon">P</span>
+        <h3>Party Planning</h3>
+        <p>Split your event budget across catering, venue, and decor.</p>
+        <a class="btn btn-primary" href="/planner/party">Open planner</a>
+      </div>
+      <div class="plan-card">
+        <span class="icon">J</span>
+        <h3>Jewelry</h3>
+        <p>Get jewelry suggestions matched to your occasion and outfit.</p>
+        <a class="btn btn-primary" href="/planner/jewelry">Open planner</a>
+      </div>
+    </div>
+
+    <h3>Recent recommendations</h3>
+    {% if history %}
+      <table class="history-table">
+        <thead>
+          <tr><th>Category</th><th>Date</th><th>Budget</th></tr>
+        </thead>
+        <tbody>
+          {% for h in history %}
+          <tr>
+            <td><span class="category-pill">{{ h.category }}</span></td>
+            <td>{{ h.created_at[:10] }}</td>
+            <td>&#8377;{{ h.input.budget }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>You haven't generated any recommendations yet. Try one of the planners above.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

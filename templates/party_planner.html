@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Party Budget Planner — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="form-wrap">
+      <h2>Party Budget Planner</h2>
+      <p>Enter your event details and Gemini will allocate your budget across catering, venue,
+      decoration, and entertainment.</p>
+
+      <form method="post" action="/generate-party">
+        <div class="field">
+          <label for="budget">Total budget (&#8377;)</label>
+          <input type="number" id="budget" name="budget" min="1000" step="100" required>
+        </div>
+        <div class="field">
+          <label for="guest_count">Guest count</label>
+          <input type="number" id="guest_count" name="guest_count" min="1" step="1" required>
+        </div>
+        <div class="field">
+          <label for="event_type">Event type</label>
+          <select id="event_type" name="event_type">
+            <option>Birthday</option>
+            <option>Wedding</option>
+            <option>Corporate</option>
+            <option>Anniversary</option>
+            <option>Baby Shower</option>
+            <option>Farewell</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="venue_preference">Venue preference</label>
+          <select id="venue_preference" name="venue_preference">
+            <option>Any</option>
+            <option>Indoor</option>
+            <option>Outdoor</option>
+            <option>Banquet Hall</option>
+            <option>Home</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="location">Location (optional)</label>
+          <input type="text" id="location" name="location" placeholder="City or area">
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Generate recommendations</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

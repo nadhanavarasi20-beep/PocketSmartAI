@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}History — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Your recommendation history</h2>
+      <p>Every plan you've generated, most recent first.</p>
+    </div>
+
+    {% if history %}
+      <table class="history-table">
+        <thead>
+          <tr><th>Category</th><th>Date</th><th>Budget</th><th>Key details</th></tr>
+        </thead>
+        <tbody>
+          {% for h in history %}
+          <tr>
+            <td><span class="category-pill">{{ h.category }}</span></td>
+            <td>{{ h.created_at[:16].replace('T', ' ') }}</td>
+            <td>&#8377;{{ h.input.budget }}</td>
+            <td>
+              {% if h.category == 'Home' %}
+                {{ h.input.room_types }}
+              {% elif h.category == 'Party' %}
+                {{ h.input.event_type }} &middot; {{ h.input.guest_count }} guests
+              {% elif h.category == 'Jewelry' %}
+                {{ h.input.occasion }} &middot; {{ h.input.style_preference }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No recommendations yet. Head to a planner from your <a href="/dashboard">dashboard</a> to get started.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

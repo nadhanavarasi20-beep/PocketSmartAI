@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}PocketSmart AI — Smart Budget & Recommendation Assistant{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="kicker">Budgeting, made intelligent</span>
+      <h1>Plan your home, your party, and your jewelry — without the budget guesswork.</h1>
+      <p>PocketSmart AI uses Gemini 1.5 Flash Pro to turn a single number — your budget — into a clear,
+      itemized plan sourced from platforms like Amazon, Flipkart, IKEA, Swiggy, Zomato, and OYO.</p>
+      <div class="hero-actions">
+        {% if user %}
+          <a class="btn btn-gold" href="/dashboard">Go to your dashboard</a>
+        {% else %}
+          <a class="btn btn-gold" href="/register">Start planning free</a>
+          <a class="btn btn-outline" href="/login">I already have an account</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="hero-figure">
+      <div class="pocket-row">
+        <div class="pocket-chip"><span class="label">Home Interior</span><span class="amount">₹45,000</span></div>
+        <div class="pocket-chip"><span class="label">Party Planning</span><span class="amount">₹30,000</span></div>
+        <div class="pocket-chip"><span class="label">Jewelry</span><span class="amount">₹15,000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="planners">
+  <div class="container">
+    <div class="section-head">
+      <h2>Three planners, one budget-smart brain</h2>
+      <p>Each planner is tuned with its own prompts and platform logic, so recommendations stay relevant
+      to what you're actually shopping for.</p>
+    </div>
+    <div class="card-grid">
+      <div class="plan-card">
+        <span class="icon">H</span>
+        <h3>Home Interior Planner</h3>
+        <p>Tell us your rooms and the items you need — lighting, fans, furniture — and get a
+        cost-balanced plan across IKEA and Amazon.</p>
+        <a class="btn btn-primary" href="{{ '/planner/home' if user else '/login' }}">Plan my home</a>
+      </div>
+      <div class="plan-card">
+        <span class="icon">P</span>
+        <h3>Party Budget Planner</h3>
+        <p>Enter your guest count, event type, and budget — we'll split it across catering, venue,
+        decoration, and entertainment.</p>
+        <a class="btn btn-primary" href="{{ '/planner/party' if user else '/login' }}">Plan my event</a>
+      </div>
+      <div class="plan-card">
+        <span class="icon">J</span>
+        <h3>Jewelry Budget Planner</h3>
+        <p>Set your occasion and style, optionally upload your outfit, and get jewelry suggestions
+        that coordinate and stay on budget.</p>
+        <a class="btn btn-primary" href="{{ '/planner/jewelry' if user else '/login' }}">Plan my jewelry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+    <div class="card-grid">
+      <div class="plan-card">
+        <h3>1. Share your budget</h3>
+        <p>Fill a short form for the category you're planning — no lengthy setup.</p>
+      </div>
+      <div class="plan-card">
+        <h3>2. Gemini does the thinking</h3>
+        <p>Gemini 1.5 Flash Pro allocates your budget and drafts platform-aware suggestions, including
+        image analysis for jewelry matching.</p>
+      </div>
+      <div class="plan-card">
+        <h3>3. Review & reuse</h3>
+        <p>Every recommendation is saved to your history, so you can revisit or compare plans anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}{{ category }} Recommendations — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ category }} recommendations</h2>
+      <p>Generated for a budget of &#8377;{{ input_data.budget }}.</p>
+    </div>
+
+    {% if result.fallback %}
+      <div class="alert alert-info">
+        Showing a locally generated estimate because the Gemini API was unavailable. Add a valid
+        <code>GEMINI_API_KEY</code> to your <code>.env</code> file for live AI recommendations.
+      </div>
+    {% endif %}
+
+    {% if input_data.outfit_image_url %}
+      <img src="{{ input_data.outfit_image_url }}" alt="Uploaded outfit" class="image-preview">
+    {% endif %}
+
+    <div class="result-summary">
+      <h3 style="color:#faf7f0;">Plan summary</h3>
+      <p>{{ result.summary }}</p>
+    </div>
+
+    <div class="result-grid">
+      {% for entry in (result['items'] if 'items' in result else result['categories']) %}
+      <div class="result-item">
+        <span class="platform-tag">{{ entry.platform }}</span>
+        <h3>{{ entry.name }}</h3>
+        <div class="amount">&#8377;{{ entry.allocated_budget }}</div>
+        <p>{{ entry.suggestion }}</p>
+        {% if entry.estimated_price_range %}
+          <p><strong>Estimated range:</strong> {{ entry.estimated_price_range }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if result.color_notes %}
+      <div class="tips-box">
+        <h3>Color & styling notes</h3>
+        <p>{{ result.color_notes }}</p>
+      </div>
+    {% endif %}
+
+    {% if result.tips %}
+      <div class="tips-box">
+        <h3>Tips</h3>
+        <ul>
+          {% for tip in result.tips %}
+            <li>{{ tip }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <div class="hero-actions" style="margin-top:32px;">
+      <a class="btn btn-primary" href="/dashboard">Back to dashboard</a>
+      <a class="btn btn-outline" href="/history">View history</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

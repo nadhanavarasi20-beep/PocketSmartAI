@@ -1,0 +1,408 @@
+[
+  {
+    "id": "0c6b690d-a359-4ae2-9e70-ad99a5b02563",
+    "username": "Nadha",
+    "category": "Home",
+    "input": {
+      "budget": 50000.0,
+      "room_types": "Living room, kitchen, bedroom",
+      "items": "2 ceiling fans, 1 dining table, 4 wall lights",
+      "style_preference": "Modern"
+    },
+    "result": {
+      "total_budget": 50000.0,
+      "summary": "This budget plan allocates the \u20b950,000 budget efficiently across the three rooms, focusing on a premium modern dining table from IKEA as the centerpiece of the living/dining area. The remaining budget is strategically distributed to source sleek, energy-efficient BLDC ceiling fans from Amazon and stylish, minimalist LED wall lights from Flipkart, leaving a healthy buffer for installation costs.",
+      "items": [
+        {
+          "name": "Modern 4-Seater Dining Table",
+          "allocated_budget": 30000.0,
+          "platform": "IKEA",
+          "suggestion": "IKEA Sandsberg or Melltorp table with a minimalist matte metal frame and slim wooden top, offering a clean Nordic modern aesthetic.",
+          "estimated_price_range": "\u20b922,000 - \u20b928,000"
+        },
+        {
+          "name": "2 Ceiling Fans",
+          "allocated_budget": 10000.0,
+          "platform": "Amazon",
+          "suggestion": "Atomberg Renesa 1200mm BLDC motor ceiling fans with remote control. Sleek, blade-free canopy design in matte black or white for a futuristic look.",
+          "estimated_price_range": "\u20b97,500 - \u20b99,500"
+        },
+        {
+          "name": "4 Wall Lights",
+          "allocated_budget": 6000.0,
+          "platform": "Flipkart",
+          "suggestion": "Minimalist up-and-down LED wall sconces in a matte black finish, emitting a warm yellow glow to elevate the bedroom and living room ambiance.",
+          "estimated_price_range": "\u20b94,000 - \u20b95,500"
+        }
+      ],
+      "tips": [
+        "Opt for BLDC motor ceiling fans; they not only look incredibly sleek and modern but also cut down your lighting electricity consumption by up to 65%.",
+        "Install the modern wall lights in pairs on opposite walls to create a balanced, symmetrical lighting layout that visually expands the rooms."
+      ]
+    },
+    "created_at": "2026-09-28T07:06:32.460084+00:00"
+  },
+  {
+    "id": "99c56511-ab60-4981-9f24-cd1bd2164e89",
+    "username": "Nadha",
+    "category": "Home",
+    "input": {
+      "budget": 50000.0,
+      "room_types": "Living room, kitchen, bedroom",
+      "items": "2 ceiling fans, 1 dining table, 4 wall lights",
+      "style_preference": "Modern"
+    },
+    "result": {
+      "total_budget": 50000.0,
+      "summary": "A balanced plan for Living room, kitchen, bedroom split across 3 item group(s). This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "2 ceiling fans",
+          "allocated_budget": 16666.67,
+          "platform": "Amazon",
+          "suggestion": "Look for mid-range 2 ceiling fans options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        },
+        {
+          "name": "1 dining table",
+          "allocated_budget": 16666.67,
+          "platform": "Flipkart",
+          "suggestion": "Look for mid-range 1 dining table options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        },
+        {
+          "name": "4 wall lights",
+          "allocated_budget": 16666.67,
+          "platform": "IKEA",
+          "suggestion": "Look for mid-range 4 wall lights options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        }
+      ],
+      "tips": [
+        "Prioritize functional pieces (seating, lighting) before purely decorative ones.",
+        "Compare the same product across platforms before purchasing."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T08:35:18.946958+00:00"
+  },
+  {
+    "id": "e61ae279-bb0e-4925-b39e-ef68a861e8dc",
+    "username": "Nadha",
+    "category": "Jewelry",
+    "input": {
+      "budget": 40000.0,
+      "occasion": "Anniversary",
+      "style_preference": "Fusion",
+      "outfit_image_url": null
+    },
+    "result": {
+      "total_budget": 40000.0,
+      "summary": "A fusion jewelry set suited for Anniversary. This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "Necklace Set",
+          "allocated_budget": 20000.0,
+          "platform": "Amazon",
+          "suggestion": "Fusion style necklace set appropriate for Anniversary.",
+          "estimated_price_range": "\u20b916000 - \u20b924000"
+        },
+        {
+          "name": "Earrings",
+          "allocated_budget": 12000.0,
+          "platform": "Flipkart",
+          "suggestion": "Fusion style earrings appropriate for Anniversary.",
+          "estimated_price_range": "\u20b99600 - \u20b914400"
+        },
+        {
+          "name": "Bangles",
+          "allocated_budget": 8000.0,
+          "platform": "Amazon",
+          "suggestion": "Fusion style bangles appropriate for Anniversary.",
+          "estimated_price_range": "\u20b96400 - \u20b99600"
+        }
+      ],
+      "color_notes": "No outfit image provided - gold and white-stone tones are safe defaults for most occasions.",
+      "tips": [
+        "Match metal tone (gold/silver/rose-gold) to your outfit's dominant color.",
+        "Save 10% of the budget for a statement piece if the occasion calls for it."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T09:44:34.920590+00:00"
+  },
+  {
+    "id": "bf62b607-b910-4471-a183-87ea320a4c23",
+    "username": "Nadha",
+    "category": "Home",
+    "input": {
+      "budget": 60000.0,
+      "room_types": "Living room, kitchen, bedroom",
+      "items": "2 ceiling fans, 1 dining table, 4 wall lights",
+      "style_preference": "Modern"
+    },
+    "result": {
+      "total_budget": 60000.0,
+      "summary": "A balanced plan for Living room, kitchen, bedroom split across 3 item group(s). This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "2 ceiling fans",
+          "allocated_budget": 20000.0,
+          "platform": "Amazon",
+          "suggestion": "Look for mid-range 2 ceiling fans options that balance durability and style.",
+          "estimated_price_range": "\u20b916000 - \u20b924000"
+        },
+        {
+          "name": "1 dining table",
+          "allocated_budget": 20000.0,
+          "platform": "Flipkart",
+          "suggestion": "Look for mid-range 1 dining table options that balance durability and style.",
+          "estimated_price_range": "\u20b916000 - \u20b924000"
+        },
+        {
+          "name": "4 wall lights",
+          "allocated_budget": 20000.0,
+          "platform": "IKEA",
+          "suggestion": "Look for mid-range 4 wall lights options that balance durability and style.",
+          "estimated_price_range": "\u20b916000 - \u20b924000"
+        }
+      ],
+      "tips": [
+        "Prioritize functional pieces (seating, lighting) before purely decorative ones.",
+        "Compare the same product across platforms before purchasing."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T09:47:40.047271+00:00"
+  },
+  {
+    "id": "c8daff24-6ecb-4add-a545-321ca95565d9",
+    "username": "Nadha",
+    "category": "Party",
+    "input": {
+      "budget": 50000.0,
+      "guest_count": 100,
+      "event_type": "Anniversary",
+      "venue_preference": "Banquet Hall",
+      "location": "Coimbatore"
+    },
+    "result": {
+      "total_budget": 50000.0,
+      "summary": "A proportional budget split for a Anniversary with 100 guests. This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "categories": [
+        {
+          "name": "Catering",
+          "allocated_budget": 22500.0,
+          "platform": "Swiggy",
+          "suggestion": "Reasonable catering options for a 100-guest Anniversary."
+        },
+        {
+          "name": "Venue/Accommodation",
+          "allocated_budget": 12500.0,
+          "platform": "OYO",
+          "suggestion": "Reasonable venue/accommodation options for a 100-guest Anniversary."
+        },
+        {
+          "name": "Decoration",
+          "allocated_budget": 10000.0,
+          "platform": "Amazon",
+          "suggestion": "Reasonable decoration options for a 100-guest Anniversary."
+        },
+        {
+          "name": "Entertainment",
+          "allocated_budget": 5000.0,
+          "platform": "Amazon",
+          "suggestion": "Reasonable entertainment options for a 100-guest Anniversary."
+        }
+      ],
+      "tips": [
+        "Book venues and catering early for better rates.",
+        "Keep a 5-10% contingency buffer for last-minute costs."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T09:51:59.837886+00:00"
+  },
+  {
+    "id": "c01d7efd-5fff-43d2-b51a-b43b8a6c109c",
+    "username": "Nadha",
+    "category": "Jewelry",
+    "input": {
+      "budget": 40000.0,
+      "occasion": "Wedding",
+      "style_preference": "Traditional",
+      "outfit_image_url": null
+    },
+    "result": {
+      "total_budget": 40000.0,
+      "summary": "A traditional jewelry set suited for Wedding. This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "Necklace Set",
+          "allocated_budget": 20000.0,
+          "platform": "Amazon",
+          "suggestion": "Traditional style necklace set appropriate for Wedding.",
+          "estimated_price_range": "\u20b916000 - \u20b924000"
+        },
+        {
+          "name": "Earrings",
+          "allocated_budget": 12000.0,
+          "platform": "Flipkart",
+          "suggestion": "Traditional style earrings appropriate for Wedding.",
+          "estimated_price_range": "\u20b99600 - \u20b914400"
+        },
+        {
+          "name": "Bangles",
+          "allocated_budget": 8000.0,
+          "platform": "Amazon",
+          "suggestion": "Traditional style bangles appropriate for Wedding.",
+          "estimated_price_range": "\u20b96400 - \u20b99600"
+        }
+      ],
+      "color_notes": "No outfit image provided - gold and white-stone tones are safe defaults for most occasions.",
+      "tips": [
+        "Match metal tone (gold/silver/rose-gold) to your outfit's dominant color.",
+        "Save 10% of the budget for a statement piece if the occasion calls for it."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T09:54:11.941159+00:00"
+  },
+  {
+    "id": "022454b0-9f99-4014-973a-a15f180d67d3",
+    "username": "Nadha",
+    "category": "Home",
+    "input": {
+      "budget": 50000.0,
+      "room_types": "Living room, kitchen, bedroom",
+      "items": "2 ceiling fans, 1 dining table, 4 wall lights",
+      "style_preference": "Modern"
+    },
+    "result": {
+      "total_budget": 50000.0,
+      "summary": "A balanced plan for Living room, kitchen, bedroom split across 3 item group(s). This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "2 ceiling fans",
+          "allocated_budget": 16666.67,
+          "platform": "Amazon",
+          "suggestion": "Look for mid-range 2 ceiling fans options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        },
+        {
+          "name": "1 dining table",
+          "allocated_budget": 16666.67,
+          "platform": "Flipkart",
+          "suggestion": "Look for mid-range 1 dining table options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        },
+        {
+          "name": "4 wall lights",
+          "allocated_budget": 16666.67,
+          "platform": "IKEA",
+          "suggestion": "Look for mid-range 4 wall lights options that balance durability and style.",
+          "estimated_price_range": "\u20b913333 - \u20b920000"
+        }
+      ],
+      "tips": [
+        "Prioritize functional pieces (seating, lighting) before purely decorative ones.",
+        "Compare the same product across platforms before purchasing."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T10:55:51.919526+00:00"
+  },
+  {
+    "id": "8ea7e7cf-a3e3-4282-b9f1-4a0d0486a87e",
+    "username": "Nadha",
+    "category": "Party",
+    "input": {
+      "budget": 40000.0,
+      "guest_count": 200,
+      "event_type": "Anniversary",
+      "venue_preference": "Banquet Hall",
+      "location": "Coimbatore"
+    },
+    "result": {
+      "total_budget": 40000.0,
+      "summary": "A proportional budget split for a Anniversary with 200 guests. This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "categories": [
+        {
+          "name": "Catering",
+          "allocated_budget": 18000.0,
+          "platform": "Swiggy",
+          "suggestion": "Reasonable catering options for a 200-guest Anniversary."
+        },
+        {
+          "name": "Venue/Accommodation",
+          "allocated_budget": 10000.0,
+          "platform": "OYO",
+          "suggestion": "Reasonable venue/accommodation options for a 200-guest Anniversary."
+        },
+        {
+          "name": "Decoration",
+          "allocated_budget": 8000.0,
+          "platform": "Amazon",
+          "suggestion": "Reasonable decoration options for a 200-guest Anniversary."
+        },
+        {
+          "name": "Entertainment",
+          "allocated_budget": 4000.0,
+          "platform": "Amazon",
+          "suggestion": "Reasonable entertainment options for a 200-guest Anniversary."
+        }
+      ],
+      "tips": [
+        "Book venues and catering early for better rates.",
+        "Keep a 5-10% contingency buffer for last-minute costs."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T10:57:14.965029+00:00"
+  },
+  {
+    "id": "ad77a6f2-df9d-4972-bb67-af32973cfadf",
+    "username": "Nadha",
+    "category": "Jewelry",
+    "input": {
+      "budget": 30000.0,
+      "occasion": "Wedding",
+      "style_preference": "Traditional",
+      "outfit_image_url": null
+    },
+    "result": {
+      "total_budget": 30000.0,
+      "summary": "A traditional jewelry set suited for Wedding. This is a fallback estimate generated locally because the Gemini API was unavailable - connect a valid GEMINI_API_KEY for live, personalized recommendations.",
+      "items": [
+        {
+          "name": "Necklace Set",
+          "allocated_budget": 15000.0,
+          "platform": "Amazon",
+          "suggestion": "Traditional style necklace set appropriate for Wedding.",
+          "estimated_price_range": "\u20b912000 - \u20b918000"
+        },
+        {
+          "name": "Earrings",
+          "allocated_budget": 9000.0,
+          "platform": "Flipkart",
+          "suggestion": "Traditional style earrings appropriate for Wedding.",
+          "estimated_price_range": "\u20b97200 - \u20b910800"
+        },
+        {
+          "name": "Bangles",
+          "allocated_budget": 6000.0,
+          "platform": "Amazon",
+          "suggestion": "Traditional style bangles appropriate for Wedding.",
+          "estimated_price_range": "\u20b94800 - \u20b97200"
+        }
+      ],
+      "color_notes": "No outfit image provided - gold and white-stone tones are safe defaults for most occasions.",
+      "tips": [
+        "Match metal tone (gold/silver/rose-gold) to your outfit's dominant color.",
+        "Save 10% of the budget for a statement piece if the occasion calls for it."
+      ],
+      "fallback": true
+    },
+    "created_at": "2026-09-28T10:58:19.785171+00:00"
+  }
+]

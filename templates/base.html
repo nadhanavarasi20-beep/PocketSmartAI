@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PocketSmart AI{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">P</span> PocketSmart AI
+      </a>
+      <div class="nav-links">
+        <a href="/#planners">Planners</a>
+        <a href="/testimonials">Testimonials</a>
+        {% if user %}
+          <a href="/history">History</a>
+          <a href="/dashboard">Dashboard</a>
+          <a class="btn btn-outline" href="/logout">Log out</a>
+        {% else %}
+          <a href="/login">Log in</a>
+          <a class="btn btn-primary" href="/register">Get started</a>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 PocketSmart AI &mdash; a GenAI budget &amp; recommendation assistant.</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/testimonials">Testimonials</a>
+        <a href="/#planners">Planners</a>
+      </div>
+    </div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

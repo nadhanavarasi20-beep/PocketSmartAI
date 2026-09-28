@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Home Interior Planner — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="form-wrap">
+      <h2>Home Interior Budget Planner</h2>
+      <p>Tell us your budget, rooms, and the items you need — Gemini will split the budget and
+      suggest cost-effective options across IKEA and Amazon.</p>
+
+      <form method="post" action="/generate-home">
+        <div class="field">
+          <label for="budget">Total budget (&#8377;)</label>
+          <input type="number" id="budget" name="budget" min="500" step="100" required>
+        </div>
+        <div class="field">
+          <label for="room_types">Room types</label>
+          <input type="text" id="room_types" name="room_types" placeholder="Living Room, Kitchen, Bedroom" required>
+        </div>
+        <div class="field">
+          <label for="items">Items & quantities</label>
+          <textarea id="items" name="items" rows="3" placeholder="2 ceiling fans, 1 dining table, 4 wall lights" required></textarea>
+          <div class="field-hint">Separate items with commas.</div>
+        </div>
+        <div class="field">
+          <label for="style_preference">Style preference</label>
+          <select id="style_preference" name="style_preference">
+            <option>Modern</option>
+            <option>Minimalist</option>
+            <option>Traditional</option>
+            <option>Scandinavian</option>
+            <option>Industrial</option>
+            <option>Bohemian</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Generate recommendations</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

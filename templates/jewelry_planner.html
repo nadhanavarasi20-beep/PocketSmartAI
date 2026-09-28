@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Jewelry Budget Planner — PocketSmart AI{% endblock %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="form-wrap">
+      <h2>Jewelry Budget Planner</h2>
+      <p>Set your budget and occasion, and optionally upload an outfit photo so Gemini can factor in
+      color coordination.</p>
+
+      <form method="post" action="/generate-jewelry" enctype="multipart/form-data">
+        <div class="field">
+          <label for="budget">Total budget (&#8377;)</label>
+          <input type="number" id="budget" name="budget" min="500" step="100" required>
+        </div>
+        <div class="field">
+          <label for="occasion">Occasion</label>
+          <select id="occasion" name="occasion">
+            <option>Wedding</option>
+            <option>Engagement</option>
+            <option>Festival</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Everyday Wear</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="style_preference">Style preference</label>
+          <select id="style_preference" name="style_preference">
+            <option>Traditional</option>
+            <option>Contemporary</option>
+            <option>Minimalist</option>
+            <option>Antique</option>
+            <option>Fusion</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="outfit_image">Outfit photo (optional)</label>
+          <input type="file" id="outfit_image" name="outfit_image" accept="image/*">
+          <div class="field-hint">JPG or PNG. Used only to suggest matching colors and tones.</div>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Generate recommendations</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/main.js"></script>
+{% endblock %}
